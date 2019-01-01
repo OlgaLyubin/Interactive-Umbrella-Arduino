@@ -43,7 +43,7 @@ void loop() {
   Serial.println(temperature);
 
   // Set the primary colour of LED strips as blue if the temperature falls below 26:
-  if(temperature<26) {
+  if(temperature<=10) {
     int i = 0;
       while(i< 37){
         leds1[i] = CRGB(5,5,15);
@@ -54,7 +54,7 @@ void loop() {
       }
   }
   // Set the primary colour of LED strips as red if the temperature raises above 28:
-  else if(temperature>28) {
+  else if(temperature>10) {
     int i = 0;
       while(i< 37){
         leds1[i] = CRGB(20,5,5);
